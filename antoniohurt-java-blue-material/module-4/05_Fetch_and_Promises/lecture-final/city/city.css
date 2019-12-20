@@ -1,0 +1,36 @@
+body {
+    background-color: whitesmoke;
+ }
+ h1 {
+    text-align: center;
+    color: blue;
+    font-size: 3rem;
+ }
+  
+#cities {
+    display: flex;
+}
+
+ #cities .city {
+    border: 1px black solid;
+    width: 45%;
+    margin: 0 auto;
+    background-color: lightgrey;
+    margin-bottom: 10px;
+ }
+  
+ .city h2 {
+    background-color: gray;
+    line-height: 40px;
+    margin-top: 0;
+    text-align: center;
+ }
+  
+ .city .location {
+    font-size: 1.5rem; 
+ }
+  
+ .city p {
+    padding-left: 10px;
+ }
+ 

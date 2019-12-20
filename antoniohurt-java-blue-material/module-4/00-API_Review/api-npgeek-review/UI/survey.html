@@ -1,0 +1,79 @@
+<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<link href="./css/site.css" rel="stylesheet" type="text/css">
+		<link href="./css/parkDetail.css" rel="stylesheet" type="text/css">
+		<link href="./css/survey.css" rel="stylesheet" type="text/css">
+
+		<script src="/js/survey.js"></script>
+
+		<title>National Park Geek - Survey</title>
+	</head>
+	<body>
+		<header>
+			
+			<img src="./img/logo.png">
+			<div>
+				
+				
+				<nav>
+					<a href="/">Home</a> |
+					<a href="/survey.html">Survey</a>
+				</nav>
+			</div>
+		</header>
+		<section id="main">
+
+<div class="sv-grid-container">
+  <div class="sv-surveyTitle"><h1>National Parks Survey</h1></div>
+  <div class="sv-surveyDescription">Please tell us a little about yourself and your favorite national park.</div>
+  <div class="sv-survey">
+  	<form id="survey" action="http://localhost:8080/api-npgeek-review/survey" method="POST">
+  	
+  		<div class="errors">
+  			<ul></ul>
+  		</div>
+  	
+  	 	<div class="surveyFormItem">
+	  		<label for="parkCode">Favorite Park:</label>
+	  		<select id="parkCode" name="parkCode">
+	  			<option value="">--- Select a park ---</option>
+	  			<option value="CVNP">Cuyahoga Valley National Park</option><option value="ENP">Everglades National Park</option><option value="GCNP">Grand Canyon National Park</option><option value="GNP">Glacier National Park</option><option value="GSMNP">Great Smoky Mountains National Park</option><option value="GTNP">Grand Teton National Park</option><option value="MRNP">Mount Rainier National Park</option><option value="RMNP">Rocky Mountain National Park</option><option value="YNP">Yellowstone National Park</option><option value="YNP2">Yosemite National Park</option>
+	  		</select>
+	  		
+  		</div>
+  		
+  		<div class="surveyFormItem">
+	  		<label for="emailAddress">Email Address:</label>
+	  		<input id="emailAddress" name="emailAddress" type="text" value="">
+  		</div>
+  		
+  		<div class="surveyFormItem">
+	  		<label for="state">State of Residence:</label>
+	  		<select id="state" name="state">
+	  			<option value="">--- Select your state ---</option>
+	  			<option value="AK">Alaska</option><option value="AL">Alabama</option><option value="AR">Arkansas</option><option value="AZ">Arizona</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DC">District of Columbia</option><option value="DE">Delaware</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="IA">Iowa</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="MA">Massachusetts</option><option value="MD">Maryland</option><option value="ME">Maine</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MO">Missouri</option><option value="MS">Mississippi</option><option value="MT">Montana</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="NE">Nebraska</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NV">Nevada</option><option value="NY">New York</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VA">Virginia</option><option value="VT">Vermont</option><option value="WA">Washington</option><option value="WI">Wisconsin</option><option value="WV">West Virginia</option><option value="WY">Wyoming</option><option value="GU">Guam</option><option value="VI">Virgin Islands</option><option value="PR">Puerto Rico</option><option value="AE">Armed forces - Europe</option><option value="AA">Armed forces - America</option><option value="AP">Armed forces - Pacific</option>
+	  		</select>
+  		</div>
+  		
+  		<div class="surveyFormItem">
+  			<label for="acivityLevel">Activity Level:</label>
+	  		<input id="acivityLevel1" name="acivityLevel" type="radio" value="inactive">Inactive
+	  		<input id="acivityLevel2" name="acivityLevel" type="radio" value="sedentary">Sedentary
+	  		<input id="acivityLevel3" name="acivityLevel" type="radio" value="active">Active
+	  		<input id="acivityLevel4" name="acivityLevel" type="radio" value="extremely active">Extremely Active
+  		</div>	
+  		
+  		<div class="surveyFormItem">
+  			<input class="surveySubmitButton" type="submit" value="Save Answers">
+  		</div>
+  	</form>
+  </div>
+</div>
+
+
+
+		</section>
+		<footer>
+		</footer>
+	
+</body></html>

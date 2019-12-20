@@ -1,0 +1,180 @@
+html {
+    height: 100%;
+    
+    /* Define default font size */
+    font-size: 16px;
+}
+
+* { 
+    box-sizing: border-box;
+}
+
+body {
+    /* Change the default font */
+    font-family: 'Raleway', sans-serif;
+
+    /* Gradient Background */
+    background-image: linear-gradient(to bottom, #858C90,);
+
+    /* backgroun stretch and not repeat */
+    background-repeat: no-repeat;
+
+    /* Do not scroll background with page */
+    background-attachment: fixed;
+
+    /* Force elements to not wrap and scroll horizontally */
+    white-space: nowrap;
+
+}
+
+div.trello-list {
+    /* Create a multi-column layout */
+    display: inline-block;
+    
+    /* Fixes the width of the columns */
+    width: 300px;
+    
+    background-color: #DDD;
+    
+    /* Rounds the corners */
+    border-radius: 2px 3px;
+
+    /* Space to the right of each list */
+    margin-right: 10px;
+
+    /* Align the top of each list */
+    vertical-align: top;
+}
+
+div.trello-list h2 {
+    /* push the h2 from the edges */
+    margin: 8px;
+
+    /* Keep font size consistent with the root of the document */
+    font-size: 1.0rem;
+    font-weight: bold;
+}
+
+div.trello-list ol {
+    /* Keep the cards from being pushed in */
+    margin: 0;
+    padding: 0;
+}
+
+div.trello-list li {
+    /* Remove the numbers */
+    list-style: none;
+
+    background-color: rbg(255, 255, 255);
+
+    /* Font size smaller than title */
+    font-size: .9rem;
+
+    /* space between items and height */
+    margin-bottom: 10px;
+    padding: 8px;
+
+    /* round each card's edge */
+    border-radius: 1px;
+
+    /* Override the body nowrap to allow title to wrap */
+    white-space: normal;
+}
+
+div.trello-list li:hover {
+    /* Make background darker */
+    background-color: #f5f6f7;
+    /* Change the font color */
+    color: darkblue; 
+}
+
+/* Remove bottom margin from last li */
+div.trello-list li:last-child {
+    margin-bottom: 0px;
+}
+
+div.trello-list a {
+    /* change the layout to block */
+    display: block;
+    
+    /* removing the link unline */
+    text-decoration: none;
+    
+    /* setting padding for spacing */
+    padding: 8px 0px 8px 5px; /* top right bottom left */
+    
+    /* set the relative font size */
+    font-size: 0.85rem;
+}
+
+div.trello-list a:hover {
+    background-color: rgba(9, 45, 66 .1);
+}
+
+header > h1, header > p {
+    /* Display elements side by side */
+    display: inline-block;
+
+    /* Height of items */
+    height: 20px;
+
+    /* push border to the right */
+    padding-right: 20px;
+
+    /* Middle align content in the boxes */
+    vertical-align: middle;
+
+    /* Change the font color */
+    color: rgba(255, 255, 255, 0.8);
+
+    /* Vertical line between items */
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+header > h1 {
+    /* Uppercase the name */
+    text-transform: uppercase;
+    /* Make the font size larger */ 
+    font-size: 1.2rem;
+}
+
+header > p {
+    /* Decrease the font size */
+    font-size: 0.9rem;
+
+    /* Remove the padding */
+    padding: 0;
+    /* Set the width so we can center it */
+    width: 15%;
+
+    /* Center the text */
+    text-align: center;
+}
+
+.labels span {
+    /* Change to inline block so it can be sized */
+    display: inline-block;
+    
+    /* size it */
+    width: 35px;
+    height: 8px;
+
+    /* Add a rounded corner */
+    border-radius: 3px;
+}
+
+.label.pathway {
+    background-color: red;
+}
+
+.label-individual {
+    background-color: green;
+}
+
+.label.pair {
+    background-color: lightblue;
+}
+
+.label.general {
+    background-color:  orange;
+}

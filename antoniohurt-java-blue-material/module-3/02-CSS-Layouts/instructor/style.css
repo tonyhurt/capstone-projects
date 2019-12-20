@@ -1,0 +1,86 @@
+:root {
+    --blue: #00adee;
+    --grey: #505355;
+}
+  
+* {
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 8% 84% 8%;
+    grid-template-areas: ". header ."
+                         ". main   ."
+                         ". footer .";
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+#student-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-areas: 
+                         "quote quote image"
+                         "profile profile contact"
+                         "experience experience experience";
+    grid-gap: 25px;
+}
+
+#student-picture {
+    grid-area: image;
+}
+
+#student-quote {
+    grid-area: quote;
+}
+
+#student-profile {
+    grid-area: profile;
+}
+
+#student-contact {
+    grid-area: contact;
+}
+
+#experience {
+    grid-area: experience;
+}
+
+header img {
+    width: 35%;
+}
+
+h1.headline {
+    margin-top: 5px;
+    font-size: 3rem;
+}
+
+#student-picture img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+#student-quote h2 {
+    margin: 0;
+    vertical-align: middle;
+}
+
+
+
+

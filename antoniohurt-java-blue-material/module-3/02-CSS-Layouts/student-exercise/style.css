@@ -1,0 +1,72 @@
+:root {
+    --blue: #00adee;
+    --grey: #505355;
+}
+  
+* {
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+  #student-picture img {
+    border-radius: 50%;
+    height: 350px;
+    float: right;
+    position: relative; 
+    
+}
+
+header img {
+    height: 25px;
+}
+
+
+h1.headline {
+    font-size: 60px;
+    width: 60%;
+}
+
+#student-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "sq sq si"
+    "sp sp sc"
+    "se se se";
+
+}
+
+#student-quote {
+    grid-area: sq;
+}
+
+#student-image {
+    grid-area: si;
+}
+
+#student-profile {
+    grid-area: sp;
+}
+
+#student-contact {
+    grid-area: sc;
+}
+
+#experience {
+    grid-area: se;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div #experience >div {
+    width: 33%;
+
+}
+h3 {
+    color: #00adee;
+}
