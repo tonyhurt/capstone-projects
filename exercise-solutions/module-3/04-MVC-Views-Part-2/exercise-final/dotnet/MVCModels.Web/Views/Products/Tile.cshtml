@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Tile";
+}
+
+<h2>All Products</h2>
+
+<div id="masonry-page">
+    @{
+        ViewData["Action"] = "Tile";
+        ViewData["Controller"] = "Products";
+    }
+    <partial name="_Filters" />
+
+    <div id="grid" class="main-content">
+        @foreach (var product in Model)
+        {
+            var imagePath = Url.Content("~/images/product-images/" + product.ImageName);
+            var topSeller = (product.IsTopSeller) ? "top-seller" : "";
+            var soldOut = (product.RemainingStock == 0) ? "sold-out" : "";
+
+            <div class="tile @topSeller @soldOut">
+
+                @if(product.RemainingStock == 0)
+                {
+                    <span class="banner">Sold Out</span>
+                }
+
+                <a class="product-image" asp-controller="Products" asp-action="Detail" asp-route-id="@product.Id">
+                    <img src=@imagePath />
+                </a>
+                <div class="details">
+                    <p class="name"><a href="#">@product.Name</a></p>
+
+                    <div class="rating">
+                        @for (int i = 1; i <= 5; i++)
+                        {
+                            if (product.AverageRating >= i)
+                            {
+                                <span class="filled">&#9734;</span>
+                            }
+                            else
+                            {
+                                <span>&#9734;</span>
+                            }
+                        }
+                    </div>
+
+                    @if (product.IsTopSeller)
+                    {
+                        <br />
+                        <p class="product-alert">Top Seller</p>
+                    }
+                    @if (product.RemainingStock > 0 && product.RemainingStock < 5)
+                    {
+                        <p class="product-alert">@product.RemainingStock remaining!</p>
+                    }
+                    <p class="price">@product.Price.ToString("C")</p>
+                </div>
+            </div>
+        }
+    </div>
+</div>

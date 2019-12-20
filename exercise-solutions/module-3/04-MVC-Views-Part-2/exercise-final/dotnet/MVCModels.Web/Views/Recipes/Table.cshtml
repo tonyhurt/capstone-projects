@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Recipe>
+@{
+    ViewData["Title"] = "Table";
+}
+
+
+<h2>All Recipes</h2>
+
+<table id="recipe-table">
+
+    <tr>
+        <td></td>
+        @foreach (var recipe in Model)
+        {
+            var imagePath = Url.Content($"~/images/{recipe.ImageName}");
+            <td>
+                <a asp-controller="Recipes" asp-action="Detail" asp-route-id="@recipe.Id">
+                    <img class="recipe-image" src="@imagePath" />
+                </a>
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>Name</td>
+        @foreach (var recipe in Model)
+        {
+            <td>@recipe.Name</td>
+        }
+    </tr>
+    <tr>
+        <td>Type</td>
+        @foreach (var recipe in Model)
+        {
+            <td>@recipe.RecipeType</td>
+        }
+    </tr>
+    <tr>
+        <td>Cook Time</td>
+        @foreach (var recipe in Model)
+        {
+            <td>@recipe.CookTimeInMinutes min</td>
+        }
+    </tr>
+    <tr>
+        <td>Ingredients</td>
+        @foreach (var recipe in Model)
+        {
+            <td>@recipe.Ingredients.Count ingredients</td>
+        }
+    </tr>
+    <tr>
+        <td>Rating</td>
+        @foreach (var recipe in Model)
+        {
+            var starPath = Url.Content($"~/images/{Math.Round(recipe.AverageRating, 0)}-star.png");
+            <td><img src="@starPath" /></td>
+        }
+    </tr>
+
+</table>

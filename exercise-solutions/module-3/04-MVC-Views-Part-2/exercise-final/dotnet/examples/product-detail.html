@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail - MVCModels.Web</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/Products">Gallery</a></li>
+            <li><a href="/Products/Tile">Grid</a></li>
+        </ul> 
+    </nav>
+
+    <main>
+
+        <h2>Product Page</h2>
+
+        <!-- Container for the Product -->
+        <div id="toy-detail">
+            <img class="product-image" src=/images/toy-balls.jpg />
+            <div class="product-description">
+                <h3>
+                    Rainbow Stackable Balls
+                </h3>
+                
+                <!-- .filled will make the star solid -->
+                <div class="rating">
+                    <span class="filled">&#9734;</span>
+                    <span class="filled">&#9734;</span>
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
+                </div>
+
+                <!-- Include this if the product has a Remaining Stock of 5 or less -->
+                <p class="alert-remaining">BUY NOW! Only 4 left!</p>
+                <p class="description">The safest stackable balls for a baby. GIFT Ready, reduce teething injury, and
+                    sharpen your child&#x27;s mind!</p>
+                <p class="price">$24.99</p>
+
+                <!-- If item is in stock -->
+                <button class="action">Add to Cart</button>
+                <!-- OR if item is out of stock -->
+                <button disabled>Sold Out</button>
+
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2019 - Tech Elevator</p>
+        </footer>
+    </main>
+    <script src="/js/site.js?v=BxFAw9RUJ1E4NycpKEjCNDeoSvr4RPHixdBq5wDnkeY"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿@model CustomerSearch
+@{
+    ViewData["Title"] = "Index";
+}
+
+<form method="get" asp-action="SearchResult" asp-controller="Customers" class="form-inline">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" placeholder="Search" />        
+    </div>
+    <div class="form-group">
+        <label asp-for="SortByColumn"></label>
+        <select asp-for="SortByColumn" asp-items="Model.SortOptions" class="form-control"></select>
+    </div>
+    <input class="btn btn-default" name="search" value="Search" type="submit" />
+</form>
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Active</th>
+    </tr>
+    @foreach (var customer in Model.Results)
+    {
+        <tr>
+            <td>@customer.FirstName @customer.LastName</td>
+            <td>@customer.Email</td>
+            <td>@(customer.IsActive ? "Yes" : "No")</td>
+        </tr>
+    }
+</table>

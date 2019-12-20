@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tile - MVCModels.Web</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/Products">Gallery</a></li>
+            <li><a href="/Products/Tile">Grid</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <h2>All Products</h2>
+
+        <div id="masonry-page">
+
+            <!-- Container for Filter Choices -->
+            <div id="filter-options">
+                <h3>Refine By</h3>
+                <p>Price</p>
+                <ul>
+                    <li><a href="/Products/tile?maxprice=25">Under $25</a></li>
+                    <li><a href="/Products/tile?minprice=25&amp;maxprice=50">$25 to $50</a></li>
+                    <li><a href="/Products/tile?minprice=50">$50 & Above</a></li>
+                </ul>
+                <p>Avg. Review</p>
+                <ul>
+                    <li><a class="rating" href="/Products/tile?minrating=4"><span class="filled">&#9734;</span><span class="filled">&#9734;</span><span class="filled">&#9734;</span><span class="filled">&#9734;</span><span>&#9734;</span> & Up</a></li>
+                    <li><a class="rating" href="/Products/tile?minrating=3"><span class="filled">&#9734;</span><span class="filled">&#9734;</span><span class="filled">&#9734;</span><span>&#9734;</span><span>&#9734;</span> & Up</a></li>
+                    <li><a class="rating" href="/Products/tile?minrating=2"><span class="filled">&#9734;</span><span class="filled">&#9734;</span><span class="filled">&#9734;</span><span>&#9734;</span><span>&#9734;</span> & Up</a></li>
+                    <li><a class="rating" href="/Products/tile?minrating=1"><span class="filled">&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span> & Up</a></li>
+                </ul>
+                <p>Category</p>
+                <ul>
+                    <li><a href="/Products/tile?category=Home">Home</a></li>
+                    <li><a href="/Products/tile?category=Apparel">Apparel</a></li>
+                    <li><a href="/Products/tile?category=Jewelry">Jewelry</a></li>
+                    <li><a href="/Products/tile?category=Garden">Garden</a></li>
+                </ul>              
+            </div>
+
+            <!-- Container for all of the Products -->
+            <div id="grid" class="main-content">
+
+                <!-- Standard Product -->
+                <div class="tile  ">
+                    <a class="product-image" href="/Products/Detail/1">
+                        <img src=/images/toy-car.jpg />
+                    </a>
+                    <div class="details">
+                        <p class="name"><a href="#">Push and Pull Race Car</a></p>
+                        
+                        <!-- .filled will make the star solid -->
+                        <div class="rating">
+                            <span class="filled">&#9734;</span>
+                            <span>&#9734;</span>
+                            <span>&#9734;</span>
+                            <span>&#9734;</span>
+                            <span>&#9734;</span>
+                        </div>
+
+                        <p class="price">$8.99</p>
+                    </div>
+                </div>
+    
+                <!-- Add the .top-seller class if the product is considered a Top Seller -->
+                <div class="tile top-seller ">
+                    <a class="product-image" href="/Products/Detail/2">
+                        <img src=/images/toy-balls.jpg />
+                    </a>
+                    <div class="details">
+                        <p class="name"><a href="#">Rainbow Stackable Balls</a></p>
+                        
+                        <!-- .filled will make the star solid -->
+                        <div class="rating">
+                            <span class="filled">&#9734;</span>
+                            <span class="filled">&#9734;</span>
+                            <span class="filled">&#9734;</span>
+                            <span class="filled">&#9734;</span>
+                            <span>&#9734;</span>
+                        </div>
+
+                        <!-- Add the Top Seller <br/> and product alert 
+                            if the product is considered a Top Seller -->
+                        <br />
+                        <p class="product-alert">Top Seller</p>
+                        <!-- Add the X remaining product alert if the product 
+                            has 5 or less Remaining Stock -->
+                        <p class="product-alert">4 remaining!</p>
+                        <p class="price">$24.99</p>
+                    </div>
+                </div>
+
+                <!-- Add the .sold-out class if the Remaining Stock is 0 -->
+                <div class="tile  sold-out">
+                    <!-- Add the Sold Out banner if the Remaining Stock is 0 -->
+                    <span class="banner">Sold Out</span>
+                    <a class="product-image" href="/Products/Detail/3">
+                        <img src=/images/toy-gym.jpg />
+                    </a>
+                    <div class="details">
+                        <p class="name"><a href="#">Kidz Crossfit WOD Gym</a></p>
+
+                        <!-- .filled will make the star solid -->
+                        <div class="rating">
+                            <span class="filled">&#9734;</span>
+                            <span class="filled">&#9734;</span>
+                            <span class="filled">&#9734;</span>
+                            <span class="filled">&#9734;</span>
+                            <span>&#9734;</span>
+                        </div>
+
+                        <p class="price">$89.99</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2019 - Tech Elevator</p>
+        </footer>
+    </main>
+    <script src="/js/site.js?v=BxFAw9RUJ1E4NycpKEjCNDeoSvr4RPHixdBq5wDnkeY"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Detail";
+    var imagePath = Url.Content("~/images/product-images/" + Model.ImageName);
+}
+
+<h2>Product Page</h2>
+
+
+
+<div id="product-detail">
+    <img class="product-image" src=@imagePath />
+    <div class="product-description">
+        <h3>
+            @Model.Name
+        </h3>
+
+        <div class="rating">
+            @for (int i = 1; i <= 5; i++)
+            {
+                if (Model.AverageRating >= i)
+                {
+                    <span class="filled">&#9734;</span>
+                }
+                else
+                {
+                    <span>&#9734;</span>
+                }
+            }
+        </div>
+
+        @if (Model.RemainingStock > 0 && Model.RemainingStock < 5)
+        {
+            <p class="alert-remaining">BUY NOW! Only @Model.RemainingStock left!</p>
+        }
+        <p class="description">@Model.Description</p>
+        <p class="price">@Model.Price.ToString("C")</p>
+
+        @if (Model.RemainingStock > 0)
+        {
+            <button class="action">Add to Cart</button>
+        }
+        else
+        {
+            <button disabled>Sold Out</button>
+        }
+    </div>
+</div>

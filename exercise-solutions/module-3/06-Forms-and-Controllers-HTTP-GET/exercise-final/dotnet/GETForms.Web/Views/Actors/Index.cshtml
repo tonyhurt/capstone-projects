@@ -1,0 +1,24 @@
+﻿@model ActorSearch
+@{
+    ViewBag.Title = "All Actors List";
+}
+
+<form method="get" asp-action="SearchResult" asp-controller="Actors" class="form-inline">
+    <div class="form-group">
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" class="form-control" />
+    </div>
+    <input class="btn btn-default" name="search" value="Search" type="submit" />
+</form>
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+    </tr>
+    @foreach (var actor in Model.Results)
+    {
+        <tr>
+            <td>@actor.FirstName @actor.LastName</td>
+        </tr>
+    }
+</table>

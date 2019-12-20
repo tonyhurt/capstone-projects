@@ -1,0 +1,149 @@
+:root {
+    --top-row-height: 120px;
+    --gutter: 20px;
+    --blue: #00adee;
+    --light-blue: rgba(0, 173, 238, 0.4);
+    --green: #8cc36f;
+    --light-green: rgba(170, 239, 135, 0.8);  
+    --bg-color: rgba(192, 192, 192, 0.1);
+    --subheading: rgba(0, 0, 0, 0.6);
+  }
+  
+  * {
+    box-sizing: border-box;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+  }
+  
+  html {
+    font-size: 16px;
+  }
+  
+  body {
+      background-color: var(--bg-color);
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  p.subheading,
+  h2 {
+    font-size: 1.5rem;
+    color: var(--subheading);
+  }
+  
+  h3 {
+    font-size: 1rem;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Layout */
+  aside {
+    position: fixed;
+    width: 200px;
+  }
+  
+  aside img {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  main {
+    margin-left: 200px;
+  }
+  
+  /* Top Row */
+  aside img,
+  main header {
+    height: var(--top-row-height);
+  }
+  
+  main header p.subheading {
+    font-size: 2em;
+  }
+  
+  /* Side Nav Styles */
+  aside {
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+    border-right: 1px solid var(--light-blue);
+    height: 90vh;
+  }
+  
+  aside ul li {
+    list-style: none;
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid var(--light-blue);
+    text-transform: uppercase;
+    line-height: 2;
+  }
+  
+  aside ul li a {
+    color: var(--blue);
+    font-weight: bold;
+  }
+  
+  /* Main Styles */
+  main {
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+  }
+  
+  main header {
+      align-items: center;
+  }
+  
+  main header img {
+      height: 80%;
+      margin-right: 50px;    
+  }
+  
+  
+  
+  main > img {
+    display: block;
+    width: 100%;
+  }
+  
+  main section {
+    margin-top: var(--gutter);
+  }
+  
+  main section div {
+    display: inline-block;
+    padding-right: 20px;
+    width: 33%;
+  }
+  
+  main section div:not(:first-child) {
+    padding-left: 20px;
+  }
+  
+  main section div:not(:last-child) {
+    border-right: 1px solid var(--light-green);
+  }
+  
+  main section h2 {
+    color: var(--green);
+  }
+  
+  main section h2 i {
+    margin-right: 10px;
+  }

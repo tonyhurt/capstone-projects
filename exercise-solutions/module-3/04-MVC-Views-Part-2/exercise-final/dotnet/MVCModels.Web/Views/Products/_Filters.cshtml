@@ -1,0 +1,40 @@
+<!-- Container for Filter Choices
+        Each link should take the user to this current page and use any combination of the following
+        querystring parameters to filter the page:
+        - maxPrice (number)
+        - minPrice (number)
+        - minRating (number)
+        - category (string) - Home, Apparel, Jewelry, Garden
+
+        NOTE: Each of the views that call this class will be passed an Action and Controller in the ViewData
+        dictionary. These will be necessary when generating the links for the appropriate pages on the view.
+        You can access these values with the @ViewData["Action"] or @ViewData["Controller"] syntax.
+        -->
+    @{
+        var action = ViewData["Action"];
+        var controller = ViewData["Controller"];
+    }
+
+    <div id="filter-options">
+        <h3>Refine By</h3>
+        <p>Price</p>
+        <ul>
+            <li><a asp-controller="@controller" asp-action="@action" asp-route-maxprice="25">Under $25</a></li>
+            <li><a asp-controller="@controller" asp-action="@action" asp-route-minprice="25" asp-route-maxprice="50">$25 to $50</a></li>
+            <li><a asp-controller="@controller" asp-action="@action" asp-route-minprice="50">$50 & Above</a></li>
+        </ul>
+        <p>Avg. Review</p>
+        <ul>
+            <li><a asp-controller="@controller" asp-action="@action" asp-route-minrating="4" class="rating"><span class="filled">&#9734;</span><span class="filled">&#9734;</span><span class="filled">&#9734;</span><span class="filled">&#9734;</span><span>&#9734;</span> & Up</a></li>
+            <li><a asp-controller="@controller" asp-action="@action" asp-route-minrating="3" class="rating"><span class="filled">&#9734;</span><span class="filled">&#9734;</span><span class="filled">&#9734;</span><span>&#9734;</span><span>&#9734;</span> & Up</a></li>
+            <li><a asp-controller="@controller" asp-action="@action" asp-route-minrating="2" class="rating"><span class="filled">&#9734;</span><span class="filled">&#9734;</span><span class="filled">&#9734;</span><span>&#9734;</span><span>&#9734;</span> & Up</a></li>
+            <li><a asp-controller="@controller" asp-action="@action" asp-route-minrating="1" class="rating"><span class="filled">&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span> & Up</a></li>
+        </ul>
+        <p>Category</p>
+        <ul>
+            <li><a asp-controller="@controller" asp-action="@action" asp-route-category="Home">Home</a></li>
+            <li><a asp-controller="@controller" asp-action="@action" asp-route-category="Apparel">Apparel</a></li>
+            <li><a asp-controller="@controller" asp-action="@action" asp-route-category="Jewelry">Jewelry</a></li>
+            <li><a asp-controller="@controller" asp-action="@action" asp-route-category="Garden">Garden</a></li>
+        </ul>
+    </div>

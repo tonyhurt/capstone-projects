@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>All Products</h2>
+
+<div id="card-page">
+
+    @{
+        ViewData["Action"] = "Index";
+        ViewData["Controller"] = "Products";
+    }
+    <partial name="_Filters" />
+
+    <div class="main-content">
+        <div id="sorting-options">
+            <h3>Sort By</h3>
+            <ul>
+                <li><a asp-controller="Products" asp-action="Index" asp-route-sortOrder="@ProductSortOrder.PriceLowToHigh">Price - Low to High</a></li>
+                <li><a asp-controller="Products" asp-action="Index" asp-route-sortOrder="@ProductSortOrder.PriceHighToLow">Price - High to Low</a></li>
+                <li><a asp-controller="Products" asp-action="Index" asp-route-sortOrder="@ProductSortOrder.RatingHighToLow">Rating - High to Low</a></li>
+            </ul>
+
+        </div>
+        <div id="grid">
+            @foreach (var product in Model)
+            {
+                var imagePath = Url.Content("~/images/product-images/" + product.ImageName);
+                var soldOut = (product.RemainingStock == 0) ? "sold-out" : "";
+
+                <div class="tile @soldOut">
+
+                    @if (product.RemainingStock == 0)
+                    {
+                        <span class="banner">Sold Out</span>
+                    }
+                    else if (product.IsTopSeller)
+                    {
+                        <span class="banner top-seller">Top Seller!</span>
+                    }
+
+                    <a class="product-image" asp-controller="Products" asp-action="Detail" asp-route-id="@product.Id">
+                        <img src=@imagePath />
+                    </a>
+                    <div class="details">
+                        <p class="name">@product.Name</p>
+
+                        <div class="rating">
+                            @for (int i = 1; i <= 5; i++)
+                            {
+                                if (product.AverageRating >= i)
+                                {
+                                    <span class="filled">&#9734;</span>
+                                }
+                                else
+                                {
+                                    <span>&#9734;</span>
+                                }
+                            }
+                        </div>
+
+                        @if (product.RemainingStock > 0 && product.RemainingStock < 5)
+                        {
+                            <span class="product-alert">Only @product.RemainingStock left!</span>
+                        }
+                        <p class="price">@product.Price.ToString("C")</p>
+
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

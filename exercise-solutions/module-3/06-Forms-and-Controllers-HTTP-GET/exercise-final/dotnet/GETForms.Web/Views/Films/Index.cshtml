@@ -1,0 +1,44 @@
+﻿@model FilmSearch
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<form method="get" asp-action="SearchResult" asp-controller="Films" class="form-inline">
+    <div class="form-group">
+        <label asp-for="MinimumLength"></label>
+        <input asp-for="MinimumLength" class="form-control" />        
+    </div>
+    <div class="form-group">
+        <label asp-for="MaximumLength"></label>
+        <input asp-for="MaximumLength" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Genre"></label>
+        <select asp-for="Genre" asp-items="Model.Genres" class="form-control"></select>        
+    </div>
+    <input class="btn btn-default" name="search" value="Search" type="submit" />
+</form>
+
+<table class="table">
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Release Year</th>
+        <th>Length</th>
+        <th>Rating</th>
+    </tr>
+    @foreach (var film in Model.Results)
+    {
+        <tr>
+            <td>@film.Title</td>
+            <td>@film.Description</td>
+            <td>@film.ReleaseYear</td>
+            <td>@film.Length</td>
+            <td>@film.Rating</td>
+        </tr>
+    }
+</table>
+
+
+

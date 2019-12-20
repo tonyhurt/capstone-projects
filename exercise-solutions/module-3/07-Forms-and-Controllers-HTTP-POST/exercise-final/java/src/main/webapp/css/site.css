@@ -1,0 +1,34 @@
+.form-group select {
+	display: block;
+	margin-bottom: .5em;
+}
+
+.form-group input {
+	display: block;
+	margin-bottom: .5em;
+}
+
+.form-group label {
+	display: block;
+	width: 8em;
+	text-align: left;
+	font-weight: bold;
+}
+
+.formSubmitButton {
+	display: relative;
+	margin-top: 1em;
+}
+
+.title {
+	font-weight: bold;
+	font-size: 125%;
+}
+
+.ratingStar {
+	height: 20px;
+}
+
+.review {
+	margin-bottom: 30px;
+}

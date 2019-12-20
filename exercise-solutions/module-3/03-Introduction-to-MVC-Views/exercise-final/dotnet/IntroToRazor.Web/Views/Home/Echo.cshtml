@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Echo";
+
+    string word = ViewData["word"] as string;
+    int count = Convert.ToInt32(ViewData["count"]);
+}
+
+<nav id="page-options">
+    <ul>
+        <li><a asp-controller="Home" asp-action="Echo" asp-route-word="Echo" asp-route-count="10">Echo 10</a></li>
+        <li><a asp-controller="Home" asp-action="Echo" asp-route-word="Hello!" asp-route-count="20">Hello! 20</a></li>
+        <li><a asp-controller="Home" asp-action="Echo" asp-route-word="Goodbye!" asp-route-count="50">Goodbye! 50</a></li>
+    </ul>
+</nav>
+
+<ul>
+    @for (int i = count; i > 0; i--)
+    {
+        string fontSize = i.ToString() + "px";
+        <li style="font-size: @fontSize">@word</li>
+    }
+</ul>
