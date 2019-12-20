@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Allerta&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap');
+
+
+header img {
+	height: 110px;
+}
+
+nav {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+li {
+	list-style: none;
+}
+
+body {
+	background-color: #dae3dc;
+	font-family: 'Kulim Park', serif;
+}
+
+nav {
+	display: block;
+	margin: auto;
+	width: 100%;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+	height: 40px;
+}
+
+nav ul li {
+	float: left;
+	border-right: 1px solid #bbb;
+}
+
+nav ul li a {
+	text-decoration: none;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 12px 16px;
+}
+
+li a:hover {
+	background-color: #787473;
+}
+
+.active {
+	background-color: #8fd143;
+}
+
+#weather-image {
+	height: 20px;
+}
+
+#homepage-content {
+	display: flex;
+	padding: 20px 20px 20px 20px;
+	margin: 40px;
+	background-color: #d7ebcc;
+	border-radius: 15px;
+	
+}
+
+#homepage-content img {
+	border-radius: 25px;
+	width: 350px; 
+	margin: 10px;
+	position: relative;
+	margin: 10px;
+}
+
+#homepage-info {
+	display: block;
+	text-align: left;
+	margin: 10px;
+}
+
+@font-face {
+	font-family: home-font;
+	src: url(https://fonts.google.com/specimen/Kulim+Park);
+
+}
+.name {
+	font-size: 30px;
+	font-style: bold;
+	font-family: home-font;
+
+}
+
+#park-details {
+	display: flex;
+	padding: 20px 20px 20px 20px;
+	margin: 40px;
+	background-color: #d7ebcc;
+	border-radius: 15px;
+
+	
+}
+
+#image-and-quote h5 {
+	display: block;
+	text-align: center;
+	
+}
+ #image-and-quote img {
+ border-radius: 20px;
+ }
+
+
+#weather {
+display: flex;
+	padding: 20px 20px 20px 20px;
+	margin: 40px;
+	border-radius: 15px;
+	max-width: 60%;
+    clear: left;
+    	
+		
+}
+
+#weather img {
+	height: 50%;
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+}
+
+#weather-details {
+	display: block;
+	margin-right: 10px;
+	margin-left: 10px;
+	background: #e1e5f7;
+	border-radius: 20px;
+	text-align: center;
+	
+}
+
+#weather-photos {
+	border-radius: 50%;
+	display: inline-block;
+	margin-right: 30px;
+	font-size: 16px;
+
+
+}
+
+#quote {
+	font-family: 'Cedarville Cursive';
+}
+
+#quote-author {
+		font-family: 'Cedarville Cursive';
+		text-align: right;
+		
+	
+}
+
+#details-title {
+	text-align: center;
+	margin-top: 10px;
+}
+
+#favorite-park-tile {
+	display: block;;
+	margin: 40px;
+	background-color: #d7ebcc;
+	border-radius: 15px;
+	text-align: center;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#favorite-park-tile img {
+	border-radius: 20px;
+	margin: 10px;
+}
+
+#favorite-park-tile li {
+	text-align: center;
+	margin-top: 10px;
+	padding: 15px;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#favorite-parks-title {
+	text-align: center;
+}
+
+#favorite-parks-subtext {
+	text-align: center;
+}
+
+#survey {
+	display: block;
+	width: 100%;
+	text-align: left;
+	
+}
+
+#temperature {
+	font-size: 26px;
+}
+
+#park-details-description {
+	font-family: 'Allerta', sans-serif;
+	
+	
+}
+
+#park-details-list {
+	font-family: 'Darker Grotesque', sans-serif;
+	
+}
+
+.error {
+	color: red;
+}
+
